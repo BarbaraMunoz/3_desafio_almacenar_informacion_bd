@@ -1,0 +1,24 @@
+<section class="container fluid mt-5">
+<h2 class="text-center">SERIES</h2>
+<%= link_to "Agregar Nueva Serie", "/nueva_serie", class:"btn boton"%>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sinopsis</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @series.each do |serie| %>
+            <tr>
+                <td> <%= serie.name %> </td>
+                <td> <%= serie.synopsis %> </td>
+                <td> <%= serie.director %> </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+</section>

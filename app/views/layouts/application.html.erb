@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafío 3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('logo_cine.png') %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  
+  <%= render 'welcome/header' %>
+  <%= render 'welcome/navbar' %>
+
+    <%= yield %> <!--Se inyecta fragmento en la página-->
+
+  <hr>
+  <%= render 'welcome/footer' %>
+  </body>
+</html>

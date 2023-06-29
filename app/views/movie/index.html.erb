@@ -1,0 +1,24 @@
+<section class="container fluid mt-5">
+<h2 class="text-center">PELICULAS</h2>
+<%= link_to "Agregar Nueva Película", "/nueva_movie", class:"btn boton"%>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sinopsis</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @movies.each do |movie| %>
+            <tr>
+                <td><%= movie.name %></td>
+                <td><%= movie.synopsis %></td>
+                <td><%= movie.director %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+</section>

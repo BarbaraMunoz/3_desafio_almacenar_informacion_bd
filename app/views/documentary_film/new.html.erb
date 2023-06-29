@@ -1,0 +1,27 @@
+<section class="container fluid align-center pt-5">
+<h1 class="pb-3">Agregar Nuevo Documental</h1>
+
+<%= form_with model: @documentaryFilms, method: :post do  |form| %>
+    <div class="col-4">
+        <div>
+            <%= form.label :title, "Nombre", class: "form-label" %>
+            <%= form.text_field :title, class: "form-control" %>
+        </div>
+    
+
+        <div class="pt-2">
+            <%= form.label :content, "Sinopsis", class:"form-label" %>
+            <%= form.text_field :content, class: "form-control" %>
+        </div>
+
+        <div class="pt-2">
+            <%= form.label :content, "Director", class:"form-label" %>
+            <%= form.text_field :content, class: "form-control" %>
+        </div>
+        
+        <div>
+            <%= form.submit "Submit", class: "btn boton" %>
+        </div>
+    </div>
+<% end %>
+</section>
